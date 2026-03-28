@@ -26,19 +26,19 @@ issue that affects the official `skill-creator` `run_loop.py` in OpenClaw enviro
 
 ```bash
 # 1. Create an eval set (or use the example)
-cp ~/.openclaw/workspace/.agents/skills/trigger-bench/evals/example-evals.json /tmp/my-evals.json
+cp {SKILL_DIR}/evals/example-evals.json /tmp/my-evals.json
 
 # 2. Run a single evaluation pass
-python3 ~/.openclaw/workspace/.agents/skills/trigger-bench/scripts/run_eval_openclaw.py \
+python3 {SKILL_DIR}/scripts/run_eval_openclaw.py \
   --eval-set /tmp/my-evals.json \
-  --skill-path ~/.openclaw/workspace/.agents/skills/YOUR_SKILL \
+  --skill-path {YOUR_SKILL_DIR} \
   --runs-per-query 3 \
   --verbose
 
 # 3. Run the auto-improvement loop (iterates until 100% or max-iterations)
-python3 ~/.openclaw/workspace/.agents/skills/trigger-bench/scripts/run_loop_openclaw.py \
+python3 {SKILL_DIR}/scripts/run_loop_openclaw.py \
   --eval-set /tmp/my-evals.json \
-  --skill-path ~/.openclaw/workspace/.agents/skills/YOUR_SKILL \
+  --skill-path {YOUR_SKILL_DIR} \
   --model claude-opus-4-5 \
   --max-iterations 5 \
   --runs-per-query 3 \
