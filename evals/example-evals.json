@@ -1,0 +1,7 @@
+[
+  {"query": "I was just corrected about routing. how do I log this?", "should_trigger": true},
+  {"query": "this is the third time the same mistake happened", "should_trigger": true},
+  {"query": "feature request: auto-send DM summary after push", "should_trigger": true},
+  {"query": "what's the current stock price?", "should_trigger": false},
+  {"query": "write a python script to parse JSON", "should_trigger": false}
+]
